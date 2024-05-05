@@ -1,6 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
-import { EntityManager } from 'typeorm';
 
 @Controller()
 export class AppController {
