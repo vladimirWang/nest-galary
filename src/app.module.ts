@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { User } from './user/entities/user.entity';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: 'galary',
       synchronize: true,
       logging: true,
-      entities: [],
+      entities: [User],
       migrations: ['./src/migration/**.ts'],
       poolSize: 10,
       connectorPackage: 'mysql2',
