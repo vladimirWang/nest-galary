@@ -5,6 +5,8 @@ import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/entities/user.entity';
 
+const env = process.env.NODE_ENV;
+console.info('-----env------', env);
 @Module({
   imports: [
     UserModule,
@@ -15,7 +17,7 @@ import { User } from './user/entities/user.entity';
       username: 'root',
       password: '123456',
       database: 'galary',
-      synchronize: true,
+      synchronize: env === 'development',
       logging: true,
       entities: [User],
       migrations: ['./src/migration/**.ts'],
