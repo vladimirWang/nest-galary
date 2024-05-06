@@ -1,9 +1,17 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Inject } from '@nestjs/common';
 import { AppService } from './app.service';
+import { UserService } from './user/user.service';
 
 @Controller()
 export class AppController {
+  @Inject(UserService)
+  private userService: UserService;
+
   constructor(private readonly appService: AppService) {}
+  @Get('create')
+  create() {
+    return this.userService.create({ username: 'john' });
+  }
 
   @Get()
   getHello(): string {
