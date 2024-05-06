@@ -7,7 +7,8 @@ export class UserService {
   @Inject(PrismaService)
   private prisma: PrismaService;
 
-  async create(data: Prisma.UserCreateInput) {
+  // Prisma.UserCreateInput
+  async create(data: any) {
     return await this.prisma.user.create({
       data,
       select: {
