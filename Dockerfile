@@ -24,7 +24,7 @@ WORKDIR /app
 
 RUN npm install --production
 
-RUN npm run migrate:prod
+# RUN npm run migrate:prod
 
 EXPOSE 3000
 
