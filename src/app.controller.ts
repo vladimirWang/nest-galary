@@ -9,8 +9,10 @@ export class AppController {
 
   constructor(private readonly appService: AppService) {}
   @Get('create')
-  create() {
-    return this.userService.create({ username: 'john' });
+  create(): string {
+    console.log('create');
+    return 'create';
+    // return this.userService.create({ username: 'john' });
   }
 
   @Get()
