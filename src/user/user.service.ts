@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
-import { Prisma } from '@prisma/client';
+// import { PrismaService } from 'src/prisma/prisma.service';
+// import { Prisma } from '@prisma/client';
 
 @Injectable()
 export class UserService {
@@ -9,7 +9,7 @@ export class UserService {
 
   // Prisma.UserCreateInput
   async create(data) {
-    return 'create user success';
+    return 'create user success' + JSON.stringify(data);
     // return await this.prisma.user.create({
     //   data,
     //   select: {
