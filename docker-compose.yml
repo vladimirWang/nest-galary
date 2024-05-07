@@ -8,8 +8,8 @@ services:
     #   - mysql-container
     ports:
       - 80:3000
-    networks:
-      - common-network
+    # networks:
+    #   - common-network
   # mysql-container:
   #   image: mysql
   #   # volumes:
@@ -19,7 +19,6 @@ services:
   #     MYSQL_ROOT_PASSWORD: Zecheng1107$$
   #   networks:
   #     - common-network
-
-networks:
-  common-network:
-    driver: bridge
+# networks:
+#   common-network:
+#     driver: bridge
