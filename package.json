@@ -6,9 +6,9 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "npx dotenv -e .env.production nest build",
+    "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "npx dotenv -e .env.development nest start",
+    "start": "nest start",
     "start:dev": "npx dotenv -e .env.development nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
