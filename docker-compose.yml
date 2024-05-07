@@ -10,15 +10,15 @@ services:
       - 80:3000
     networks:
       - common-network
-  mysql-container:
-    image: mysql
-    # volumes:
-    #   - /Users/wangxiaoyu/mysql-data:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: galary
-      MYSQL_ROOT_PASSWORD: Zecheng1107$$
-    networks:
-      - common-network
+  # mysql-container:
+  #   image: mysql
+  #   # volumes:
+  #   #   - /Users/wangxiaoyu/mysql-data:/var/lib/mysql
+  #   environment:
+  #     MYSQL_DATABASE: galary
+  #     MYSQL_ROOT_PASSWORD: Zecheng1107$$
+  #   networks:
+  #     - common-network
 
 networks:
   common-network:
