@@ -1,2 +1,19 @@
 POST http://localhost:3000/user HTTP/1.1
 content-type: application/json
+
+{
+    "username": "mike"
+}
+
+### 根据id查询
+GET http://localhost:3000/user/1 HTTP/1.1
+
+### 更新用户信息
+PATCH http://localhost:3000/user/1 HTTP/1.1
+content-type: application/json
+
+{
+    "username": "lisa ann"
+}
+### 删除用户信息
+DELETE http://localhost:3000/user/1 HTTP/1.1
