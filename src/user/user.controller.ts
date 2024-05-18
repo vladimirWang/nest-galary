@@ -10,6 +10,7 @@ import {
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { RegisterUserDto } from './dto/register-user.dto';
 
 @Controller('user')
 export class UserController {
@@ -38,5 +39,15 @@ export class UserController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.userService.remove(+id);
+  }
+
+  @Post('register')
+  register(@Body() body: any) {
+    console.log(body);
+    return 'success ' + JSON.stringify(body);
+  }
+  @Post('lgoin')
+  lgoin(@Body() body: any) {
+    return 'success get' + JSON.stringify(body);
   }
 }

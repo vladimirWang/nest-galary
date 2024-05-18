@@ -6,7 +6,7 @@ content-type: application/json
 }
 
 ### 根据id查询
-GET http://localhost:3000/user/1 HTTP/1.1
+GET http://localhost:3000/user/2 HTTP/1.1
 
 ### 更新用户信息
 PATCH http://localhost:3000/user/1 HTTP/1.1
@@ -15,5 +15,14 @@ content-type: application/json
 {
     "username": "lisa ann"
 }
+
 ### 删除用户信息
 DELETE http://localhost:3000/user/1 HTTP/1.1
+
+### 用户注册
+POST http://localhost:3000/user/register
+content-type: application/json
+
+{
+    "username": "123132"
+}
