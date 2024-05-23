@@ -47,7 +47,7 @@ export class UserController {
   //   return 'success ' + JSON.stringify(body);
   // }
   @Post('login')
-  lgoin(@Body() body: any) {
+  login(@Body() body: any) {
     return 'success get ' + JSON.stringify(body);
   }
 }

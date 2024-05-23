@@ -28,7 +28,7 @@ content-type: application/json
 }
 
 ### 用户登录
-POST http://localhost:3000/user/login
+POST http://localhost:3000/api/user/login
 content-type: application/json
 
 {
