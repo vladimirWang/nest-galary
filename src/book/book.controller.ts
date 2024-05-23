@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller('book')
+@Controller('api/book')
 export class BookController {
   @Get('list')
   list() {
