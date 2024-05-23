@@ -6,26 +6,29 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/entities/user.entity';
 import { BookModule } from './book/book.module';
 
+const env = process.env.NODE_ENV;
+console.log(env, '---node env');
+
 @Module({
   imports: [
     UserModule,
     BookModule,
-    // TypeOrmModule.forRoot({
-    //   type: 'mysql',
-    //   host: 'localhost',
-    //   port: 3306,
-    //   username: 'root',
-    //   password: '123456',
-    //   database: 'galary2',
-    //   synchronize: true,
-    //   logging: true,
-    //   entities: [User],
-    //   poolSize: 10,
-    //   connectorPackage: 'mysql2',
-    //   extra: {
-    //     authPlugins: 'sha256_password',
-    //   },
-    // }),
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'Zecheng1107$$',
+      database: 'galary2',
+      synchronize: env === 'development',
+      logging: true,
+      entities: [User],
+      poolSize: 10,
+      connectorPackage: 'mysql2',
+      extra: {
+        authPlugins: 'sha256_password',
+      },
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],
