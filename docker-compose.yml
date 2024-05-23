@@ -16,7 +16,7 @@ services:
       - /root/mysql-data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: galary
-      MYSQL_ROOT_PASSWORD: Zecheng1107$$
+      MYSQL_ROOT_PASSWORD: 12312
     networks:
       - common-network
 networks:
