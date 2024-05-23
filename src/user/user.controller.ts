@@ -48,6 +48,6 @@ export class UserController {
   // }
   @Post('login')
   login(@Body() body: any) {
-    return 'success get ' + JSON.stringify(body);
+    return this.userService.findAll(body);
   }
 }
