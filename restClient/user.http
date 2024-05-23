@@ -26,3 +26,19 @@ content-type: application/json
 {
     "username": "123132"
 }
+
+### 用户登录
+POST http://localhost:3000/user/login
+content-type: application/json
+
+{
+    "username": "123132",
+    "password": "123132"
+}
+
+### home
+GET http://localhost:3000/create
+
+
+### home
+GET http://localhost:3000/book/list

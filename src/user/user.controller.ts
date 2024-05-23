@@ -16,38 +16,38 @@ import { RegisterUserDto } from './dto/register-user.dto';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @Post()
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.userService.create(createUserDto);
-  }
+  // @Post()
+  // create(@Body() createUserDto: CreateUserDto) {
+  //   return this.userService.create(createUserDto);
+  // }
 
-  @Get()
-  findAll() {
-    return this.userService.findAll();
-  }
+  // @Get()
+  // findAll() {
+  //   return this.userService.findAll();
+  // }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.userService.findOne(+id);
-  }
+  // @Get(':id')
+  // findOne(@Param('id') id: string) {
+  //   return this.userService.findOne(+id);
+  // }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.userService.update(+id, updateUserDto);
-  }
+  // @Patch(':id')
+  // update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
+  //   return this.userService.update(+id, updateUserDto);
+  // }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.userService.remove(+id);
-  }
+  // @Delete(':id')
+  // remove(@Param('id') id: string) {
+  //   return this.userService.remove(+id);
+  // }
 
-  @Post('register')
-  register(@Body() body: any) {
-    console.log(body);
-    return 'success ' + JSON.stringify(body);
-  }
-  @Post('lgoin')
+  // @Post('register')
+  // register(@Body() body: any) {
+  //   console.log(body);
+  //   return 'success ' + JSON.stringify(body);
+  // }
+  @Post('login')
   lgoin(@Body() body: any) {
-    return 'success get' + JSON.stringify(body);
+    return 'success get ' + JSON.stringify(body);
   }
 }
